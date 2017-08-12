@@ -22,23 +22,24 @@ var bio={
               location: "Riyadh",
               blog: "blog"
             },
-        welcomeMessage: "Hello your welcome",
-        skills: ["","",""],/*array of strings*/
-        biopic: "google.com",/*url*/
+        welcomeMessage: "Hello world your welcome",
+        skills: ["Java script","CSS","HTML"],/*array of strings*/
+        biopic: "https://goo.gl/B2kpSQ",/*url*/
         display: function(){
           $("#header").append(HTMLheaderName.replace("%data%",bio.name));
           $("#header").append(HTMLheaderRole.replace("%data%",bio.role));
-          $("#topContacts").append(HTMLcontactGeneric.replace("%contact%",bio.contacts));
-          $("#topContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
-          $("#topContacts").append(HTMLemail.replace("%data%",bio.contacts.email));
-          $("#topContacts").append(HTMLgithub.replace("%data%",bio.contacts.github));
-          $("#topContacts").append(HTMLtwitter.replace("%data%",bio.contacts.twitter));
-          $("#topContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
-          $("#topContacts").append(HTMLblog.replace("%data%",bio.contacts.blog));
-          $("#topContacts").append(HTMLbioPic.replace("%data%",bio.contacts.location));
-          $("#topContacts").append(HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage));
-          $("#topContacts").append(HTMLskillsStart.replace("%data%",bio.skills)); //ithing its right
-          $("#topContacts").append(HTMLskills.replace("%data%",bio.skills));
+/*          $("#header").append(HTMLcontactGeneric.replace("%contact%",""));
+*/          $("#header").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
+          $("#header").append(HTMLemail.replace("%data%",bio.contacts.email));
+          $("#header").append(HTMLgithub.replace("%data%",bio.contacts.github));
+          $("#header").append(HTMLtwitter.replace("%data%",bio.contacts.twitter));
+          $("#header").append(HTMLlocation.replace("%data%",bio.contacts.location));
+          $("#header").append(HTMLbioPic.replace("%data%",bio.biopic));
+          $("#header").append(HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage));
+          $("#header").append(HTMLskillsStart.replace("%data%",bio.skills)); //i thing its right
+          $("#header").append(HTMLskills.replace("%data%",bio.skills[0]));
+          $("#header").append(HTMLskills.replace("%data%",bio.skills[1]));
+          $("#header").append(HTMLskills.replace("%data%",bio.skills[2]));
 
         }
 }
@@ -47,11 +48,11 @@ bio.display();
 var work ={
 
       jobs: [{/*array of objects with*/
-           employer: "googleMap" ,
-           title: "Web developer" ,
+           employer: "googleMap",
+           title: "Web developer",
            location: "Riyadh",
            dates: "20/10/2017",/*string (Can be 'in progress')*/
-           descriptio: "do a web developer", }]
+           descriptio: "do a web developer"}],
 
       display: function(){
 

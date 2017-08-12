@@ -150,10 +150,17 @@ a {
 
 .center-content {
   padding: 2.5% 5%;
-}
 
-ul {
+}
+li.flex-item{
+display: inline;
+}
+.welcome-message{
+  display:block;
+}
+ul{
   list-style-type: none;
+
 }
 
 .biopic {
