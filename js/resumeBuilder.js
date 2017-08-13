@@ -48,18 +48,24 @@ bio.display();
 var work ={
 
       jobs: [{/*array of objects with*/
-           employer: "googleMap",
+           employer: "google",
            title: "Web developer",
            location: "Riyadh",
            dates: "20/10/2017",/*string (Can be 'in progress')*/
            descriptio: "do a web developer"}],
 
       display: function(){
+          $("#workExperience").append(HTMLworkStart.replace("%data%",bio.jobs));
+          $("#workExperience").append(HTMLworkEmployer.replace("%data%",bio.employer));
+          $("#workExperience").append(HTMLworkTitle.replace("%data%",bio.title)); 
+          $("#workExperience").append(HTMLworkDates.replace("%data%",bio.dates));
+          $("#workExperience").append(HTMLworkLocation.replace("%data%",bio.location));
+          $("#workExperience").append(HTMLworkDescription.replace("%data%",bio.descriptio));
 
 
       }
     }
-
+work.display();
 // var education= {
 //
 //       schools: {[/*array of objects with*/
