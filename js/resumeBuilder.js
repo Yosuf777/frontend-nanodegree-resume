@@ -47,59 +47,121 @@ bio.display();
 
 var work ={
 
-      jobs: [{/*array of objects with*/
+      jobs: [{
             employer: "google",
            title: "Web developer",
            location: "Riyadh, SA",
-           dates: "20/10/2017",/*string (Can be 'in progress')*/
-           description: "do a web developer"}],
+           dates: "20/10/2017 - Present",
+           description: "do a web developer"},{
+                 employer: "google",
+                title: "Web developer",
+                location: "Riyadh, SA",
+                dates: "20/10/2017 - Present",
+                description: "do a web developer"}],
 
       display: function(){
 
           $("#workExperience").append(HTMLworkStart.replace("%data%",work.jobs[0]));
           $("#workExperience").append(HTMLworkEmployer.replace("%data%",work.jobs[0].employer));
-        $("#workExperience").append(HTMLworkTitle.replace("%data%",work.jobs[0].title)); 
+        $("#workExperience").append(HTMLworkTitle.replace("%data%",work.jobs[0].title));
           $("#workExperience").append(HTMLworkDates.replace("%data%",work.jobs[0].dates));
           $("#workExperience").append(HTMLworkLocation.replace("%data%",work.jobs[0].location));
           $("#workExperience").append(HTMLworkDescription.replace("%data%",work.jobs[0].description));
 
- 
+
+                    $("#workExperience").append(HTMLworkStart.replace("%data%",work.jobs[1]));
+                    $("#workExperience").append(HTMLworkEmployer.replace("%data%",work.jobs[1].employer));
+                  $("#workExperience").append(HTMLworkTitle.replace("%data%",work.jobs[1].title));
+                    $("#workExperience").append(HTMLworkDates.replace("%data%",work.jobs[1].dates));
+                    $("#workExperience").append(HTMLworkLocation.replace("%data%",work.jobs[1].location));
+                    $("#workExperience").append(HTMLworkDescription.replace("%data%",work.jobs[1].description));
+
+
 
       }
     }
 work.display();
-// var education= {
-//
-//       schools: {[/*array of objects with*/
-//            name:"King Saud Uneversity",
-//            location: "Riyadh",
-//            degree: "Bacholer",
-//            majors: ["IS","MIS","CS"],/*array of Sring*/
-//            dates: "20/1/2017", /*string (works with a hyphen between them)*/
-//            url:"www.schools.com", /*(optional)*/
-//          ]}
-//       onlineCourses: {[/*array of objects with*/
-//            title: "Cloud Computing",
-//            school: "Dell",
-//            dates: "20/1/2017",/*string (works with a hyphen between them)*/
-//            url: "www.onlineCourses.com"]},
-//
-//       display: function(){
-//
-//
-//       }
-// }
 
-// var projects ={
-//
-//       projects: {[/*array of objects with*/
-//             title: "Strava",
-//             dates: "10/10/2017",/*string (works with a hyphen between them)*/
-//             description: "sport app",
-//             images: ["urlImag","urlImag","urlImag"]/*array with string urls*/]},
-//       display: function(){
-//
-//
-//       }
-//
-//     }
+var project ={
+
+      projects: [{/*array of objects with*/
+            title: "Strava",
+            dates: "10/10/2017",/*string (works with a hyphen between them)*/
+            description: "sport app",
+            images: ["https://essaypro.com/177bc10f3fb9d5a38f0f851c7bf49ae2.jpg","https://essaypro.com/177bc10f3fb9d5a38f0f851c7bf49ae2.jpg"]/*array with string urls*/}],
+      display: function(){
+
+        $("#projects").append(HTMLprojectStart.replace("%data%",project));
+       $("#projects").append(HTMLprojectTitle.replace("%data%",project.projects[0].title));
+       $("#projects").append(HTMLprojectDates.replace("%data%",project.projects[0].dates));
+       $("#projects").append(HTMLprojectDescription.replace("%data%",project.projects[0].description));
+       $("#projects").append(HTMLprojectImage.replace("%data%",project.projects[0].images[0]));
+       $("#projects").append(HTMLprojectImage.replace("%data%",project.projects[0].images[1]));
+      }
+
+    }
+project.display();
+
+var education= {
+
+      schools: [{
+        name : "King Saud Uneversity",
+           location:"Riyadh",
+           degree: "Bacholer",
+           majors: ["IS","MIS","CS"],/*array of Sring*/
+           dates: "20/1/2017", /*string (works with a hyphen between them)*/
+           url:"www.schools.com", /*(optional)*/
+         },{
+           name : "King Saud Uneversity",
+              location:"Riyadh",
+              degree: "Bacholer",
+              majors: ["IS","MIS","CS"],/*array of Sring*/
+              dates: "20/1/2017", /*string (works with a hyphen between them)*/
+              url:"www.schools.com", /*(optional)*/
+            }],
+      onlineCourses: [{/*array of objects with*/
+           title: "Cloud Computing",
+           school: "Dell",
+           dates: "20/1/2017",/*string (works with a hyphen between them)*/
+           url: "www.onlineCourses.com"},{/*array of objects with*/
+                title: "Cloud Computing",
+                school: "Dell",
+                dates: "20/1/2017",/*string (works with a hyphen between them)*/
+                url: "www.onlineCourses.com"}],
+
+      display: function(){
+
+        $("#education").append(HTMLschoolStart.replace("%data%",education));
+        $("#education").append(HTMLschoolName.replace("%data%",education.schools[0].name));
+        $("#education").append(HTMLschoolDegree.replace("%data%",education.schools[0].degree));
+        $("#education").append(HTMLschoolDates.replace("%data%",education.schools[0].dates));
+        $("#education").append(HTMLschoolLocation.replace("%data%",education.schools[0].location));
+        $("#education").append(HTMLschoolMajor.replace("%data%",education.schools[0].majors[0]));
+        $("#education").append(HTMLschoolMajor.replace("%data%",education.schools[0].majors[1]));
+        $("#education").append(HTMLschoolMajor.replace("%data%",education.schools[0].majors[2]));
+
+
+                $("#education").append(HTMLschoolName.replace("%data%",education.schools[1].name));
+                $("#education").append(HTMLschoolDegree.replace("%data%",education.schools[1].degree));
+                $("#education").append(HTMLschoolDates.replace("%data%",education.schools[1].dates));
+                $("#education").append(HTMLschoolLocation.replace("%data%",education.schools[1].location));
+                $("#education").append(HTMLschoolMajor.replace("%data%",education.schools[1].majors[0]));
+                $("#education").append(HTMLschoolMajor.replace("%data%",education.schools[1].majors[1]));
+                $("#education").append(HTMLschoolMajor.replace("%data%",education.schools[1].majors[2]));
+
+        $("#education").append(HTMLonlineClasses.replace("%data%",education.onlineCourses));
+        $("#education").append(HTMLonlineTitle.replace("%data%",education.onlineCourses[0].title));
+        $("#education").append(HTMLonlineSchool.replace("%data%",education.onlineCourses[0].school));
+        $("#education").append(HTMLonlineDates.replace("%data%",education.onlineCourses[0].dates));
+        $("#education").append(HTMLonlineURL.replace("%data%",education.onlineCourses[0].url));
+
+        $("#education").append(HTMLonlineClasses.replace("%data%","n "));
+
+                $("#education").append(HTMLonlineTitle.replace("%data%",education.onlineCourses[1].title));
+                $("#education").append(HTMLonlineSchool.replace("%data%",education.onlineCourses[1].school));
+                $("#education").append(HTMLonlineDates.replace("%data%",education.onlineCourses[1].dates));
+                $("#education").append(HTMLonlineURL.replace("%data%",education.onlineCourses[1].url));
+
+      }
+}
+education.display();
