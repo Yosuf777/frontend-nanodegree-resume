@@ -48,20 +48,22 @@ bio.display();
 var work ={
 
       jobs: [{/*array of objects with*/
-           employer: "google",
+            employer: "google",
            title: "Web developer",
-           location: "Riyadh",
+           location: "Riyadh, SA",
            dates: "20/10/2017",/*string (Can be 'in progress')*/
-           descriptio: "do a web developer"}],
+           description: "do a web developer"}],
 
       display: function(){
-          $("#workExperience").append(HTMLworkStart.replace("%data%",bio.jobs));
-          $("#workExperience").append(HTMLworkEmployer.replace("%data%",bio.employer));
-          $("#workExperience").append(HTMLworkTitle.replace("%data%",bio.title)); 
-          $("#workExperience").append(HTMLworkDates.replace("%data%",bio.dates));
-          $("#workExperience").append(HTMLworkLocation.replace("%data%",bio.location));
-          $("#workExperience").append(HTMLworkDescription.replace("%data%",bio.descriptio));
 
+          $("#workExperience").append(HTMLworkStart.replace("%data%",work.jobs[0]));
+          $("#workExperience").append(HTMLworkEmployer.replace("%data%",work.jobs[0].employer));
+        $("#workExperience").append(HTMLworkTitle.replace("%data%",work.jobs[0].title)); 
+          $("#workExperience").append(HTMLworkDates.replace("%data%",work.jobs[0].dates));
+          $("#workExperience").append(HTMLworkLocation.replace("%data%",work.jobs[0].location));
+          $("#workExperience").append(HTMLworkDescription.replace("%data%",work.jobs[0].description));
+
+ 
 
       }
     }
