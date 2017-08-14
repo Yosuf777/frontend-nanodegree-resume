@@ -23,7 +23,7 @@ var bio={
               blog: "blog"
             },
         welcomeMessage: "Hello world your welcome",
-        skills: ["Java script","CSS","HTML"],/*array of strings*/
+        skills: ["Java script","CSS","HTML","Java","ASP.NET"],/*array of strings*/
         biopic: "https://goo.gl/B2kpSQ",/*url*/
         display: function(){
           $("#header").append(HTMLheaderName.replace("%data%",bio.name));
@@ -40,7 +40,8 @@ var bio={
           $("#header").append(HTMLskills.replace("%data%",bio.skills[0]));
           $("#header").append(HTMLskills.replace("%data%",bio.skills[1]));
           $("#header").append(HTMLskills.replace("%data%",bio.skills[2]));
-
+          $("#header").append(HTMLskills.replace("%data%",bio.skills[3]));   
+          $("#header").append(HTMLskills.replace("%data%",bio.skills[4]));
         }
 }
 bio.display();
