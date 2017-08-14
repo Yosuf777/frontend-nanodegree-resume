@@ -85,7 +85,7 @@ var work = {
 
   }
 
-}
+};
 work.display();
 
 var project = {
@@ -107,7 +107,7 @@ var project = {
     $("#projects").append(HTMLprojectImage.replace("%data%", project.projects[0].images[1]));
   }
 
-}
+};
 project.display();
 
 var education = {
@@ -180,7 +180,7 @@ var education = {
     $("#education").append(HTMLonlineURL.replace("%data%", education.onlineCourses[1].url));
 
   }
-}
+};
 education.display();
 
 $("#mapDiv").append(googleMap);
