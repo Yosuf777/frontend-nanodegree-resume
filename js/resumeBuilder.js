@@ -89,7 +89,9 @@ var project ={
             title: "Strava",
             dates: "10/10/2017",/*string (works with a hyphen between them)*/
             description: "sport app",
-            images: ["https://essaypro.com/177bc10f3fb9d5a38f0f851c7bf49ae2.jpg","https://essaypro.com/177bc10f3fb9d5a38f0f851c7bf49ae2.jpg"]/*array with string urls*/}],
+            images: ["https://s5.mzstatic.com/eu/r30/Purple128/v4/1d/00/ef/1d00efcb-cb7e-64bf-c0ab-
+
+fc91ccbbbbcb/icon190x190.jpeg","https://s5.mzstatic.com/eu/r30/Purple128/v4/1d/00/ef/1d00efcb-cb7e-64bf-c0ab-fc91ccbbbbcb/icon190x190.jpeg"]/*array with string urls*/}],
       display: function(){
 
         $("#projects").append(HTMLprojectStart.replace("%data%",project));
@@ -156,7 +158,6 @@ var education= {
         $("#education").append(HTMLonlineDates.replace("%data%",education.onlineCourses[0].dates));
         $("#education").append(HTMLonlineURL.replace("%data%",education.onlineCourses[0].url));
 
-        $("#education").append(HTMLonlineClasses.replace("%data%","n "));
 
                 $("#education").append(HTMLonlineTitle.replace("%data%",education.onlineCourses[1].title));
                 $("#education").append(HTMLonlineSchool.replace("%data%",education.onlineCourses[1].school));
@@ -166,3 +167,12 @@ var education= {
       }
 }
 education.display();
+
+$("#mapDiv").append(googleMap);
+$("#footerContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
+          $("#footerContacts").append(HTMLemail.replace("%data%",bio.contacts.email));
+          $("#footerContacts").append(HTMLgithub.replace("%data%",bio.contacts.github));
+          $("#footerContacts").append(HTMLtwitter.replace("%data%",bio.contacts.twitter));
+          $("#footerContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
+
+
