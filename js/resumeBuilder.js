@@ -40,10 +40,11 @@ var bio={
           $("#header").append(HTMLskills.replace("%data%",bio.skills[0]));
           $("#header").append(HTMLskills.replace("%data%",bio.skills[1]));
           $("#header").append(HTMLskills.replace("%data%",bio.skills[2]));
-          $("#header").append(HTMLskills.replace("%data%",bio.skills[3]));   
+          $("#header").append(HTMLskills.replace("%data%",bio.skills[3]));
           $("#header").append(HTMLskills.replace("%data%",bio.skills[4]));
+};
         }
-}
+
 bio.display();
 
 var work ={
@@ -77,10 +78,9 @@ var work ={
                     $("#workExperience").append(HTMLworkLocation.replace("%data%",work.jobs[1].location));
                     $("#workExperience").append(HTMLworkDescription.replace("%data%",work.jobs[1].description));
 
-
+};
 
       }
-    }
 work.display();
 
 var project ={
@@ -89,9 +89,8 @@ var project ={
             title: "Strava",
             dates: "10/10/2017",/*string (works with a hyphen between them)*/
             description: "sport app",
-            images: ["https://s5.mzstatic.com/eu/r30/Purple128/v4/1d/00/ef/1d00efcb-cb7e-64bf-c0ab-
-
-fc91ccbbbbcb/icon190x190.jpeg","https://s5.mzstatic.com/eu/r30/Purple128/v4/1d/00/ef/1d00efcb-cb7e-64bf-c0ab-fc91ccbbbbcb/icon190x190.jpeg"]/*array with string urls*/}],
+            images: ["https://s5.mzstatic.com/eu/r30/Purple128/v4/1d/00/ef/1d00efcb-cb7e-64bf-c0ab-fc91ccbbbbcb/icon190x190.jpeg","https://s5.mzstatic.com/eu/r30/Purple128/v4/1d/00/ef/1d00efcb-cb7e-64bf-c0ab-fc91ccbbbbcb/icon190x190.jpeg"]
+          }],
       display: function(){
 
         $("#projects").append(HTMLprojectStart.replace("%data%",project));
@@ -100,9 +99,9 @@ fc91ccbbbbcb/icon190x190.jpeg","https://s5.mzstatic.com/eu/r30/Purple128/v4/1d/0
        $("#projects").append(HTMLprojectDescription.replace("%data%",project.projects[0].description));
        $("#projects").append(HTMLprojectImage.replace("%data%",project.projects[0].images[0]));
        $("#projects").append(HTMLprojectImage.replace("%data%",project.projects[0].images[1]));
-      }
+      };
 
-    }
+}
 project.display();
 
 var education= {
@@ -164,7 +163,7 @@ var education= {
                 $("#education").append(HTMLonlineDates.replace("%data%",education.onlineCourses[1].dates));
                 $("#education").append(HTMLonlineURL.replace("%data%",education.onlineCourses[1].url));
 
-      }
+      };
 }
 education.display();
 
@@ -174,5 +173,3 @@ $("#footerContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
           $("#footerContacts").append(HTMLgithub.replace("%data%",bio.contacts.github));
           $("#footerContacts").append(HTMLtwitter.replace("%data%",bio.contacts.twitter));
           $("#footerContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
-
-
