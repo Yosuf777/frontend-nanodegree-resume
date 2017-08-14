@@ -127,6 +127,9 @@ display: table-cell;}
 .dark-gray {
   background-color: #4a4a4a;
 }
+li {
+display: block;
+}
 
 /* TODO: Replace with image later */
 #header {
@@ -149,21 +152,26 @@ display: table-cell;}
   padding: 10px;
 }
 
+
+
 .center-content {
   padding: 2.5% 5%;
 
 }
-li.flex-item{
-display: inline;
-}
+
 .welcome-message{
   display:block;
 }
 ul{
   list-style-type: none;
-
 }
 
+#skills{
+    display: block;
+}
+#info{
+    display: inline;
+}
 .biopic {
   float: left;
   padding: 10px;
