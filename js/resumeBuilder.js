@@ -163,13 +163,13 @@ for (var i= 0; i<education.schools.length; i++){
     for (var j= 0; j<education.schools[i].majors.length; j++){
     $("#education").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]));
 }}
-for (var i= 0; i<education.onlineCourses.length; i++){
+for (var h= 0; h<education.onlineCourses.length; h++){
 
     $("#education").append(HTMLonlineClasses.replace("%data%", education.onlineCourses));
-    $("#education").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title));
-    $("#education").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school));
-    $("#education").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
-    $("#education").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
+    $("#education").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[h].title));
+    $("#education").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[h].school));
+    $("#education").append(HTMLonlineDates.replace("%data%", education.onlineCourses[h].dates));
+    $("#education").append(HTMLonlineURL.replace("%data%", education.onlineCourses[h].url));
 }
 
 
